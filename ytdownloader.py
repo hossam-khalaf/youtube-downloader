@@ -22,7 +22,17 @@ video = YouTube(link)
 # for stream in video.streams.filter(progressive=True):
 #   print(stream)
 
-for stream in video.streams.filter(res='720p'):
-  print(stream)
+#resolution filter
+# for stream in video.streams.filter(res='720p'):
+#   print(stream)
 
+# for stream in video.streams.filter(subtype='mp4'):
+#   print(stream)
+
+# for stream in video.streams.filter(res='1080p'):
+#   print(stream)
+
+#highest && lowest resolutions
+print(video.streams.get_highest_resolution())
+print(video.streams.get_lowest_resolution())
 
