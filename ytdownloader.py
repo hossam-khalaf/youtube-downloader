@@ -33,6 +33,15 @@ video = YouTube(link)
 #   print(stream)
 
 #highest && lowest resolutions
-print(video.streams.get_highest_resolution())
-print(video.streams.get_lowest_resolution())
+# print(video.streams.get_highest_resolution())
+# print(video.streams.get_lowest_resolution())
+
+
+#download video locally
+
+def finish():
+  print('download done!')
+
+video.streams.get_highest_resolution().download(output_path='/Users/Sroor For Laptop/Desktop')
+video.register_on_complete_callback(finish())
 
