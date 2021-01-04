@@ -39,9 +39,18 @@ video = YouTube(link)
 
 #download video locally
 
-def finish():
-  print('download done!')
+# def finish():
+#   print('download done!')
 
-video.streams.get_highest_resolution().download(output_path='/Users/Sroor For Laptop/Desktop')
-video.register_on_complete_callback(finish())
+# video.streams.get_highest_resolution().download(output_path='/Users/Sroor For Laptop/Desktop')
+# video.register_on_complete_callback(finish())
 
+#download playlists
+
+from pytube import Playlist
+
+link = ''
+playlist = Playlist(link)
+
+for video in playlist.videos:
+  video.streams.get_highest_resolution().download(output_path='/D')
